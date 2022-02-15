@@ -1,0 +1,5 @@
+function combineArray(arr1, arr2) {
+    arr1=arr1.filter(function(item){return typeof item == 'number'});
+    arr2=arr2.filter(function(item){return typeof item == 'number'});
+    return arr1.concat(arr2);
+}

@@ -1,0 +1,5 @@
+function longestLogin(loginList) {
+    let login=loginList.reduce(function (item1,item2){return item1.length > item2.length ? item1 : item2;
+    });
+    return login;
+ }

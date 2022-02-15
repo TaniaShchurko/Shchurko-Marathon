@@ -1,0 +1,6 @@
+function modifyArray(array) {
+   let newarray=array;
+   newarray[0]='Start';
+   newarray[array.length-1]='End';
+   return newarray;
+}
