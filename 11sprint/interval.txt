@@ -1,0 +1,7 @@
+const maxInterv = (...arr) => {
+    let max = 0;
+    for(let i=0;i < arr.length; i++)
+    {if (Math.sqrt(Math.pow(arr[i]-arr[i+1],2)) > max)
+     max = Math.sqrt(Math.pow(arr[i]-arr[i+1],2));}
+    return max;
+};

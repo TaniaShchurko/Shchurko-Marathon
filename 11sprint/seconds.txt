@@ -1,0 +1,23 @@
+const summator = (item, i) => {
+  if (i===0) return item;
+  else if (i===1) return item*60;
+  else if (i===2) return item*3600;
+  else if (i===3) return item*86400;
+  else if (i===4) return item*604800;
+  else if (i===5) return item*2419200;
+  else if (i===6) return item*880588800;
+}
+const howMuchSec = (...arr) => {
+  let sum=0;
+  for(let i=0; i<arr.length; i++)
+  {
+    sum+=summator(arr[i], i)
+  }
+  return sum;
+}
+console.log(howMuchSec(12, 3)); //192
+
+console.log(howMuchSec(1, 33, 22)); //81181
+
+console.log(howMuchSec()); //0
+//seconds, minutes, hours, days, weeks, months, years

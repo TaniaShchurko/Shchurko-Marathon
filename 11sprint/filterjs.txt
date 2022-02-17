@@ -1,0 +1,5 @@
+const filterNums = (arr, number=0, parameter="greater") => {
+  if (parameter === "greater") return arr.filter((item) => {return item > number});
+  else if (parameter === "less") return arr.filter((item) => {return item < number});
+};
+console.log(filterNums([-1, 2, 4, 0, 55, -12, 3], 11, 'greater'));
