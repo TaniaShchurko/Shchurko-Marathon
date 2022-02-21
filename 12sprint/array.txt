@@ -1,0 +1,14 @@
+const product = function() {
+    this.product=1;
+    return [].reduce.call(Array.from(arguments), function(res, elem) {
+      return res * elem;
+    }, this.product);
+};
+
+const contextObj = () => {
+  this.arg_from_obj=10;
+  return this.arg_from_obj;}
+
+const getProduct = function (){
+  return product(contextObj() , 2, 3, ...arguments)
+}
